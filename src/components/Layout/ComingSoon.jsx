@@ -11,11 +11,13 @@ export default function ComingSoon({ title, description, icon: Icon = Settings }
     >
       <div className="card p-12 mt-6 flex flex-col items-center justify-center text-center max-w-2xl mx-auto space-y-6 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800/50 dark:to-surface-dark border border-gray-100 dark:border-gray-800">
         
-        <div className="relative">
-             <Wrench size={64} className="text-gray-300 dark:text-gray-600 animate-pulse" />
-             <div className="absolute -bottom-2 -right-2 bg-primary-500 text-white p-2 rounded-full shadow-lg shadow-primary-500/20">
-                 <Icon size={20} />
-             </div>
+        <div className="relative mb-2">
+            <div className="p-6 bg-primary-50 dark:bg-primary-900/20 rounded-full shadow-inner">
+                <Icon size={80} strokeWidth={1.5} className="text-primary-500 dark:text-primary-400" />
+            </div>
+            <div className="absolute -bottom-2 -right-2 bg-yellow-500 text-white p-3 rounded-full shadow-xl shadow-yellow-500/20 animate-bounce">
+                <Wrench size={24} />
+            </div>
         </div>
 
         <h2 className="text-2xl font-black text-gray-900 dark:text-gray-100 mt-4">Currently in Development</h2>
