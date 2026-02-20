@@ -7,6 +7,7 @@ import { CALCULATORS } from './utils/calculators';
 
 import Home from './pages/Home';
 import CalculatorsLibrary from './pages/CalculatorsLibrary';
+import AiBuilder from './pages/AiBuilder';
 import ComingSoon from './components/Layout/ComingSoon';
 
 // Specific Implementations
@@ -70,6 +71,7 @@ function App() {
                         <Routes>
                             <Route path="/" element={<Home />} />
                             <Route path="/library" element={<CalculatorsLibrary />} />
+                            <Route path="/ai-builder" element={<AiBuilder />} />
                             {/* Explicit Routes */}
                             <Route path="/health/bmi" element={<BMI />} />
                             <Route path="/health/vo2max" element={<Vo2Max />} />

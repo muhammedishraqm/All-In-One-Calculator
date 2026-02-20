@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { CALCULATORS, CATEGORIES } from '../utils/calculators';
-import { Activity, Landmark, Calculator, GitMerge, ArrowRight } from 'lucide-react';
+import { Activity, Landmark, Calculator, GitMerge, ArrowRight, Sparkles } from 'lucide-react';
 
 const ICONS = {
     [CATEGORIES.HEALTH]: Activity,
@@ -31,6 +31,30 @@ export default function Home() {
                 {/* Background blobs */}
                 <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary-400/20 blur-3xl rounded-full" />
                 <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-teal-400/20 blur-3xl rounded-full" />
+            </section>
+
+            {/* AI Builder Banner */}
+            <section className="px-4 md:px-0">
+                <NavLink to="/ai-builder" className="group block relative overflow-hidden rounded-3xl p-8 md:p-12 bg-gradient-to-r from-indigo-900 to-purple-900 shadow-xl border border-indigo-500/30 transition-all hover:shadow-purple-500/20 hover:-translate-y-1">
+                    <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-white/10 to-transparent transform skew-x-12 translate-x-1/2 group-hover:translate-x-full transition-transform duration-1000"></div>
+                    <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 text-white">
+                        <div className="space-y-4 max-w-xl">
+                            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-500/20 border border-purple-400/30 text-purple-200 text-xs font-bold tracking-widest uppercase mb-2">
+                                <Sparkles size={14} className="text-purple-300" />
+                                New Feature
+                            </div>
+                            <h2 className="text-3xl md:text-4xl font-black">Can't find what you need?</h2>
+                            <p className="text-indigo-200 text-lg">
+                                Describe any custom calculator you want, and our AI will build it, style it, and add it to your library instantly.
+                            </p>
+                        </div>
+                        <div className="flex-shrink-0 animate-pulse-slow">
+                            <div className="bg-white text-indigo-900 hover:bg-indigo-50 px-8 py-4 rounded-2xl font-black shadow-lg shadow-black/20 group-hover:scale-105 transition-transform flex items-center gap-2">
+                                Build with AI <ArrowRight size={20} />
+                            </div>
+                        </div>
+                    </div>
+                </NavLink>
             </section>
 
             {/* Categories Grid */}

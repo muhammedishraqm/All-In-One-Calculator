@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { CATEGORIES, CALCULATORS } from '../../utils/calculators';
-import { Activity, Landmark, Calculator, GitMerge, X, Grid, Settings } from 'lucide-react';
+import { Activity, Landmark, Calculator, GitMerge, X, Grid, Settings, Sparkles } from 'lucide-react';
 import clsx from 'clsx';
 
 const ICONS = {
@@ -68,6 +68,23 @@ export default function Sidebar({ isOpen, onClose }) {
                         >
                             <Grid size={18} />
                             Calculators Library
+                        </NavLink>
+
+                        <NavLink
+                            to="/ai-builder"
+                            onClick={() => {
+                                if (window.innerWidth < 768) onClose();
+                            }}
+                            className={({ isActive }) => clsx(
+                                "flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium rounded-xl transition-all duration-200",
+                                isActive
+                                    ? "bg-purple-600 text-white shadow-md shadow-purple-500/20"
+                                    : "text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/10 hover:bg-purple-100 dark:hover:bg-purple-900/30"
+                            )}
+                        >
+                            <Sparkles size={18} />
+                            Build with AI
+                            <span className="ml-auto px-1.5 py-0.5 max-w-fit rounded text-[9px] font-black uppercase tracking-widest bg-purple-200 dark:bg-purple-800 text-purple-700 dark:text-purple-300">Beta</span>
                         </NavLink>
                     </div>
 
