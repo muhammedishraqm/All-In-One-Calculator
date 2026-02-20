@@ -4,8 +4,9 @@ import { HistoryProvider } from './context/HistoryContext';
 import Sidebar from './components/Layout/Sidebar';
 import Topbar from './components/Layout/Topbar';
 import Home from './pages/Home';
-import BMI from './pages/calculators/BMI';
-import CompoundInterest from './pages/calculators/CompoundInterest';
+import BMI from './pages/calculators/health/BMI';
+import CompoundInterest from './pages/calculators/finance/CompoundInterest';
+import LengthConverter from './pages/calculators/converters/LengthConverter';
 
 function App() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -23,6 +24,7 @@ function App() {
                             <Route path="/" element={<Home />} />
                             <Route path="/health/bmi" element={<BMI />} />
                             <Route path="/finance/compound-interest" element={<CompoundInterest />} />
+                            <Route path="/converters/length" element={<LengthConverter />} />
                             <Route path="*" element={<Navigate to="/" replace />} />
                         </Routes>
                     </main>
