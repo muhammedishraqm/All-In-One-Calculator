@@ -75,8 +75,8 @@ export default function Sidebar({ isOpen, onClose }) {
                         const GroupIcon = ICONS[catGroup.name] || Calculator;
                         return (
                             <div key={idx} className="animate-fade-in" style={{ animationDelay: `${idx * 100}ms` }}>
-                                <h3 className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3 px-2">
-                                    <GroupIcon size={14} className="opacity-70" />
+                                <h3 className="flex items-center gap-2 text-sm font-extrabold uppercase tracking-widest text-gray-800 dark:text-gray-200 mb-4 px-2 mt-6 first:mt-0">
+                                    <GroupIcon size={16} className="text-primary-500" />
                                     {catGroup.name}
                                 </h3>
                                 <div className="space-y-1">
