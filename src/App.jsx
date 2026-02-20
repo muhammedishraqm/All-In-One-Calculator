@@ -67,7 +67,7 @@ function App() {
                                 <Route 
                                     key={calc.id} 
                                     path={calc.path} 
-                                    element={<ComingSoon title={calc.name} description={calc.description} />} 
+                                    element={<ComingSoon title={calc.name} description={calc.description} icon={calc.icon} />} 
                                 />
                             ))}
 
