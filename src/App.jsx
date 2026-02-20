@@ -27,57 +27,55 @@ function App() {
 
     return (
         <HistoryProvider>
-            <Router>
-                <div className="flex h-screen bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 overflow-hidden font-sans selection:bg-primary-500/30">
-                    <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+            <div className="flex h-screen bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 overflow-hidden font-sans selection:bg-primary-500/30">
+                <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
 
-                    <div className="flex-1 flex flex-col min-w-0 overflow-hidden relative">
-                        <Topbar onMenuClick={() => setIsSidebarOpen(true)} />
+                <div className="flex-1 flex flex-col min-w-0 overflow-hidden relative">
+                    <Topbar onMenuClick={() => setIsSidebarOpen(true)} />
 
-                        <main className="flex-1 overflow-y-auto overflow-x-hidden p-4 md:p-6 lg:p-8 scroll-smooth">
-                            <Routes>
-                                <Route path="/" element={<Home />} />
-                                <Route path="/library" element={<CalculatorsLibrary />} />
-                                {/* Explicit Routes */}
-                                <Route path="/health/bmi" element={<BMI />} />
-                                <Route path="/finance/compound-interest" element={<CompoundInterest />} />
-                                <Route path="/finance/emi" element={<HouseLoanEMI />} />
-                                <Route path="/finance/sip" element={<SIPReturns />} />
-                                <Route path="/finance/amortization" element={<LoanAmortization />} />
-                                <Route path="/math/probability" element={<ProbabilityCalculator />} />
-                                <Route path="/math/statistics" element={<StatisticsCalculator />} />
-                                <Route path="/math/equation" element={<EquationSolver />} />
-                                <Route path="/converters/length" element={<LengthConverter />} />
-                                <Route path="/utilities/age" element={<AgeCalculator />} />
-                                <Route path="/utilities/gst" element={<GSTCalculator />} />
+                    <main className="flex-1 overflow-y-auto overflow-x-hidden p-4 md:p-6 lg:p-8 scroll-smooth">
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/library" element={<CalculatorsLibrary />} />
+                            {/* Explicit Routes */}
+                            <Route path="/health/bmi" element={<BMI />} />
+                            <Route path="/finance/compound-interest" element={<CompoundInterest />} />
+                            <Route path="/finance/emi" element={<HouseLoanEMI />} />
+                            <Route path="/finance/sip" element={<SIPReturns />} />
+                            <Route path="/finance/amortization" element={<LoanAmortization />} />
+                            <Route path="/math/probability" element={<ProbabilityCalculator />} />
+                            <Route path="/math/statistics" element={<StatisticsCalculator />} />
+                            <Route path="/math/equation" element={<EquationSolver />} />
+                            <Route path="/converters/length" element={<LengthConverter />} />
+                            <Route path="/utilities/age" element={<AgeCalculator />} />
+                            <Route path="/utilities/gst" element={<GSTCalculator />} />
 
-                                {/* Dynamic Mapping for Unimplemented Routes */}
-                                {CALCULATORS.filter(calc => ![
-                                    '/health/bmi',
-                                    '/finance/compound-interest',
-                                    '/finance/emi',
-                                    '/finance/sip',
-                                    '/finance/amortization',
-                                    '/math/probability',
-                                    '/math/statistics',
-                                    '/math/equation',
-                                    '/converters/length',
-                                    '/utilities/age',
-                                    '/utilities/gst'
-                                ].includes(calc.path)).map((calc) => (
-                                    <Route 
-                                        key={calc.id} 
-                                        path={calc.path} 
-                                        element={<ComingSoon title={calc.name} description={calc.description} />} 
-                                    />
-                                ))}
+                            {/* Dynamic Mapping for Unimplemented Routes */}
+                            {CALCULATORS.filter(calc => ![
+                                '/health/bmi',
+                                '/finance/compound-interest',
+                                '/finance/emi',
+                                '/finance/sip',
+                                '/finance/amortization',
+                                '/math/probability',
+                                '/math/statistics',
+                                '/math/equation',
+                                '/converters/length',
+                                '/utilities/age',
+                                '/utilities/gst'
+                            ].includes(calc.path)).map((calc) => (
+                                <Route 
+                                    key={calc.id} 
+                                    path={calc.path} 
+                                    element={<ComingSoon title={calc.name} description={calc.description} />} 
+                                />
+                            ))}
 
-                                <Route path="*" element={<Navigate to="/" replace />} />
-                            </Routes>
-                        </main>
-                    </div>
+                            <Route path="*" element={<Navigate to="/" replace />} />
+                        </Routes>
+                    </main>
                 </div>
-            </Router>
+            </div>
         </HistoryProvider>
     );
 }
