@@ -1,6 +1,7 @@
 # OmniCalc 
 
-**The only calculator you'll ever need.** OmniCalc is a lightning-fast, offline-capable application featuring over 50 specialized calculators for finance, health, exact mathematics, and everyday utilities. 
+**The only calculator you'll ever need.** 
+OmniCalc is a lightning-fast, offline-capable application featuring over 50 specialized calculators for finance, health, exact mathematics, and everyday utilities. 
 
 **link :** https://all-in-one-calculator-seven.vercel.app
 
