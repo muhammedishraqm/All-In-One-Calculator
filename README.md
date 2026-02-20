@@ -15,11 +15,7 @@ User-Centric Design: Includes a system-wide Dark Mode and a persistent History t
 
 ## The problem this app solve 
 
-Option 1: A punchy, one-sentence summary (Great for a "Projects" section overview)
-
 Developed an offline-capable web application that eliminates app-switching by consolidating over 50 specialized tools—ranging from regional finance (like Indian GST and mutual fund SIP returns) to advanced academic math (statistics and probability)—and solved rigid tool limitations by integrating an AI feature to dynamically generate custom calculators on demand.
-
-Option 2: Action-oriented bullet points (Great for detailing your experience)
 
 Resolved tool fragmentation: Consolidated 50+ disparate tools into a single, unified platform, allowing users to seamlessly transition between everyday conversions, complex academic problem-solving (statistics, linear algebra), and personal finance tracking (SIPs, loan EMIs).
 
