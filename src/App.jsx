@@ -21,7 +21,17 @@ import EquationSolver from './pages/calculators/math/EquationSolver';
 import LengthConverter from './pages/calculators/converters/LengthConverter';
 import AgeCalculator from './pages/calculators/utilities/AgeCalculator';
 import GSTCalculator from './pages/calculators/utilities/GSTCalculator';
-
+import WordCounter from './pages/calculators/utilities/WordCounter';
+import TipSplitter from './pages/calculators/utilities/TipSplitter';
+import FuelExpenses from './pages/calculators/core/FuelExpenses';
+import PasswordChecker from './pages/calculators/utilities/PasswordChecker';
+import DateDifference from './pages/calculators/utilities/DateDifference';
+import TimeCalculator from './pages/calculators/utilities/TimeCalculator';
+import PaycheckEstimator from './pages/calculators/utilities/PaycheckEstimator';
+import BasicCalculator from './pages/calculators/core/BasicCalculator';
+import ScientificCalculator from './pages/calculators/core/ScientificCalculator';
+import TimeZoneConverter from './pages/calculators/converters/TimeZoneConverter';
+import RetirementSavings from './pages/calculators/finance/RetirementSavings';
 function App() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -49,6 +59,17 @@ function App() {
                             <Route path="/converters/length" element={<LengthConverter />} />
                             <Route path="/utilities/age" element={<AgeCalculator />} />
                             <Route path="/utilities/gst" element={<GSTCalculator />} />
+                            <Route path="/utilities/words" element={<WordCounter />} />
+                            <Route path="/utilities/tip" element={<TipSplitter />} />
+                            <Route path="/core/fuel" element={<FuelExpenses />} />
+                            <Route path="/utilities/password" element={<PasswordChecker />} />
+                            <Route path="/utilities/date-diff" element={<DateDifference />} />
+                            <Route path="/utilities/time" element={<TimeCalculator />} />
+                            <Route path="/utilities/paycheck" element={<PaycheckEstimator />} />
+                            <Route path="/core/basic" element={<BasicCalculator />} />
+                            <Route path="/core/scientific" element={<ScientificCalculator />} />
+                            <Route path="/converters/timezone" element={<TimeZoneConverter />} />
+                            <Route path="/finance/retirement" element={<RetirementSavings />} />
 
                             {/* Dynamic Mapping for Unimplemented Routes */}
                             {CALCULATORS.filter(calc => ![
@@ -62,7 +83,18 @@ function App() {
                                 '/math/equation',
                                 '/converters/length',
                                 '/utilities/age',
-                                '/utilities/gst'
+                                '/utilities/gst',
+                                '/utilities/words',
+                                '/utilities/tip',
+                                '/core/fuel',
+                                '/utilities/password',
+                                '/utilities/date-diff',
+                                '/utilities/time',
+                                '/utilities/paycheck',
+                                '/core/basic',
+                                '/core/scientific',
+                                '/converters/timezone',
+                                '/finance/retirement'
                             ].includes(calc.path)).map((calc) => (
                                 <Route 
                                     key={calc.id} 
