@@ -55,5 +55,29 @@ export const CALCULATORS = [
     category: CATEGORIES.FINANCE,
     description: 'View month-by-month breakdown of your loan payment schedule.',
     keywords: ['finance', 'loan', 'amortization', 'schedule', 'table', 'emi', 'interest']
+  },
+  {
+    id: 'binomial-probability',
+    name: 'Binomial Probability',
+    path: '/math/probability',
+    category: CATEGORIES.MATH,
+    description: 'Calculate chances of k successes in n trials.',
+    keywords: ['math', 'probability', 'statistics', 'binomial', 'chance', 'success']
+  },
+  {
+    id: 'statistics',
+    name: 'Statistics Solver',
+    path: '/math/statistics',
+    category: CATEGORIES.MATH,
+    description: 'Find mean, median, mode, variance, and standard deviation.',
+    keywords: ['math', 'statistics', 'mean', 'median', 'mode', 'standard deviation', 'variance']
+  },
+  {
+    id: 'equation-solver',
+    name: 'Quadratic Solver',
+    path: '/math/equation',
+    category: CATEGORIES.MATH,
+    description: 'Find real or complex roots for quadratic equations.',
+    keywords: ['math', 'algebra', 'equation', 'quadratic', 'roots', 'solve']
   }
 ]

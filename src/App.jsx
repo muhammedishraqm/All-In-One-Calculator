@@ -10,6 +10,9 @@ import CompoundInterest from './pages/calculators/finance/CompoundInterest';
 import HouseLoanEMI from './pages/calculators/finance/HouseLoanEMI';
 import SIPReturns from './pages/calculators/finance/SIPReturns';
 import LoanAmortization from './pages/calculators/finance/LoanAmortization';
+import ProbabilityCalculator from './pages/calculators/math/ProbabilityCalculator';
+import StatisticsCalculator from './pages/calculators/math/StatisticsCalculator';
+import EquationSolver from './pages/calculators/math/EquationSolver';
 import LengthConverter from './pages/calculators/converters/LengthConverter';
 
 function App() {
@@ -32,6 +35,9 @@ function App() {
                             <Route path="/finance/emi" element={<HouseLoanEMI />} />
                             <Route path="/finance/sip" element={<SIPReturns />} />
                             <Route path="/finance/amortization" element={<LoanAmortization />} />
+                            <Route path="/math/probability" element={<ProbabilityCalculator />} />
+                            <Route path="/math/statistics" element={<StatisticsCalculator />} />
+                            <Route path="/math/equation" element={<EquationSolver />} />
                             <Route path="/converters/length" element={<LengthConverter />} />
                             <Route path="*" element={<Navigate to="/" replace />} />
                         </Routes>
