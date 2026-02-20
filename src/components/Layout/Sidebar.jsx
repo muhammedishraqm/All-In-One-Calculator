@@ -1,14 +1,16 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { CATEGORIES, CALCULATORS } from '../../utils/calculators';
-import { Activity, Landmark, Calculator, GitMerge, X, Grid } from 'lucide-react';
+import { Activity, Landmark, Calculator, GitMerge, X, Grid, Settings } from 'lucide-react';
 import clsx from 'clsx';
 
 const ICONS = {
+    [CATEGORIES.CORE]: Grid,
     [CATEGORIES.HEALTH]: Activity,
     [CATEGORIES.FINANCE]: Landmark,
     [CATEGORIES.MATH]: Calculator,
     [CATEGORIES.CONVERTERS]: GitMerge,
+    [CATEGORIES.UTILITIES]: Settings,
 };
 
 export default function Sidebar({ isOpen, onClose }) {

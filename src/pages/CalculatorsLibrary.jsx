@@ -1,15 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { CALCULATORS, CATEGORIES } from '../utils/calculators';
-import { Activity, Landmark, Calculator, GitMerge, ArrowRight, Search, Grid } from 'lucide-react';
+import { ArrowRight, Search, Grid, Calculator } from 'lucide-react';
 import clsx from 'clsx';
-
-const ICONS = {
-  [CATEGORIES.HEALTH]: Activity,
-  [CATEGORIES.FINANCE]: Landmark,
-  [CATEGORIES.MATH]: Calculator,
-  [CATEGORIES.CONVERTERS]: GitMerge,
-};
 
 export default function CalculatorsLibrary() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -68,11 +61,10 @@ export default function CalculatorsLibrary() {
         </div>
       </div>
 
-      {/* Grid */}
       {filteredCalculators.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {filteredCalculators.map((calc, idx) => {
-             const Icon = ICONS[calc.category] || Calculator;
+             const Icon = calc.icon || Calculator;
              return (
               <NavLink 
                 key={calc.id} 
