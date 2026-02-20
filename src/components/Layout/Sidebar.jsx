@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { CATEGORIES, CALCULATORS } from '../../utils/calculators';
-import { Activity, Landmark, Calculator, GitMerge, X } from 'lucide-react';
+import { Activity, Landmark, Calculator, GitMerge, X, Grid } from 'lucide-react';
 import clsx from 'clsx';
 
 const ICONS = {
@@ -51,6 +51,24 @@ export default function Sidebar({ isOpen, onClose }) {
                 </div>
 
                 <div className="flex-1 overflow-y-auto overflow-x-hidden p-4 space-y-8 no-scrollbar pb-24">
+                    <div className="space-y-1 mb-8">
+                        <NavLink
+                            to="/library"
+                            onClick={() => {
+                                if (window.innerWidth < 768) onClose();
+                            }}
+                            className={({ isActive }) => clsx(
+                                "flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium rounded-xl transition-all duration-200",
+                                isActive
+                                    ? "bg-primary-500 text-white shadow-md shadow-primary-500/20"
+                                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                            )}
+                        >
+                            <Grid size={18} />
+                            Calculators Library
+                        </NavLink>
+                    </div>
+
                     {categoriesMap.map((catGroup, idx) => {
                         const GroupIcon = ICONS[catGroup.name] || Calculator;
                         return (

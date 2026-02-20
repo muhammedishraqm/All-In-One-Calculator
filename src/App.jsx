@@ -4,6 +4,7 @@ import { HistoryProvider } from './context/HistoryContext';
 import Sidebar from './components/Layout/Sidebar';
 import Topbar from './components/Layout/Topbar';
 import Home from './pages/Home';
+import CalculatorsLibrary from './pages/CalculatorsLibrary';
 import BMI from './pages/calculators/health/BMI';
 import CompoundInterest from './pages/calculators/finance/CompoundInterest';
 import LengthConverter from './pages/calculators/converters/LengthConverter';
@@ -22,6 +23,7 @@ function App() {
                     <main className="flex-1 overflow-y-auto overflow-x-hidden p-4 md:p-6 lg:p-8 scroll-smooth">
                         <Routes>
                             <Route path="/" element={<Home />} />
+                            <Route path="/library" element={<CalculatorsLibrary />} />
                             <Route path="/health/bmi" element={<BMI />} />
                             <Route path="/finance/compound-interest" element={<CompoundInterest />} />
                             <Route path="/converters/length" element={<LengthConverter />} />
