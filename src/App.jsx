@@ -7,6 +7,9 @@ import Home from './pages/Home';
 import CalculatorsLibrary from './pages/CalculatorsLibrary';
 import BMI from './pages/calculators/health/BMI';
 import CompoundInterest from './pages/calculators/finance/CompoundInterest';
+import HouseLoanEMI from './pages/calculators/finance/HouseLoanEMI';
+import SIPReturns from './pages/calculators/finance/SIPReturns';
+import LoanAmortization from './pages/calculators/finance/LoanAmortization';
 import LengthConverter from './pages/calculators/converters/LengthConverter';
 
 function App() {
@@ -26,6 +29,9 @@ function App() {
                             <Route path="/library" element={<CalculatorsLibrary />} />
                             <Route path="/health/bmi" element={<BMI />} />
                             <Route path="/finance/compound-interest" element={<CompoundInterest />} />
+                            <Route path="/finance/emi" element={<HouseLoanEMI />} />
+                            <Route path="/finance/sip" element={<SIPReturns />} />
+                            <Route path="/finance/amortization" element={<LoanAmortization />} />
                             <Route path="/converters/length" element={<LengthConverter />} />
                             <Route path="*" element={<Navigate to="/" replace />} />
                         </Routes>
